@@ -22,6 +22,7 @@ const participantSchema = new mongoose.Schema({
   }
 });
 
-const Participant = mongoose.model('Participant', participantSchema);
+// Check if model already exists to prevent model overwrite error in serverless environment
+const Participant = mongoose.models.Participant || mongoose.model('Participant', participantSchema);
 
 module.exports = Participant;
