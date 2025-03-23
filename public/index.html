@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Subscriber Leaderboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>YouTube Subscriber Leaderboard</h1>
+      <p>Track your marketing success and compete with other marketers!</p>
+    </header>
+    
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+      <h2>Enter Your Username</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required placeholder="Enter your username">
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+      
+      <!-- Leaderboard Preview -->
+      <div class="leaderboard">
+        <h2 class="leaderboard-title">Current Leaderboard</h2>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th class="rank">Rank</th>
+              <th>Marketer</th>
+              <th class="subscriber-count">Subscribers</th>
+            </tr>
+          </thead>
+          <tbody id="previewLeaderboardBody">
+            <!-- Leaderboard preview will be populated here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Dashboard -->
+    <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+      <div class="welcome-header">
+        <h2>Welcome, <span id="userDisplay">User</span>!</h2>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+      </div>
+      
+      <div class="add-subscriber">
+        <h3>Add New Subscriber</h3>
+        <form id="subscriberForm" class="subscriber-form">
+          <input type="text" id="subscriberUsername" required placeholder="Enter subscriber's YouTube username">
+          <button type="submit" class="add-btn">Add Subscriber</button>
+        </form>
+        <p id="successMessage" class="success-message">Subscriber added successfully!</p>
+      </div>
+      
+      <div class="leaderboard">
+        <h2 class="leaderboard-title">Live Leaderboard</h2>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th class="rank">Rank</th>
+              <th>Marketer</th>
+              <th class="subscriber-count">Subscribers</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <!-- Leaderboard data will be populated here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
