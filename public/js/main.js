@@ -11,7 +11,8 @@ const leaderboardBody = document.getElementById('leaderboardBody');
 const previewLeaderboardBody = document.getElementById('previewLeaderboardBody');
 
 // API endpoints
-const API_URL = 'https://youtube-dashboard-black.vercel.app';
+const API_URL = 'http://localhost:3000/api';
+
 
 // Event Listeners
 loginForm.addEventListener('submit', handleLogin);
